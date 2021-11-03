@@ -29,7 +29,7 @@ public class MainFrame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("TO-DO List");
         this.setSize(400, 400);
-        this.setLayout(new BorderLayout(0, 10));
+        this.setLayout(new BorderLayout());
 
 
         /// MENU BAR ///
@@ -41,12 +41,24 @@ public class MainFrame extends JFrame implements ActionListener {
         exitItem = new JMenuItem("Exit");
         helpItem = new JMenuItem("Help");
 
-        ;
+        saveItem.addActionListener(this);
+        loadItem.addActionListener(this);
+        exitItem.addActionListener(this);
+        helpItem.addActionListener(this);
+
+        fileMenu.add(saveItem);
+        fileMenu.add(loadItem);
+        fileMenu.add(exitItem);
+        menuBar.add(fileMenu);
+
+        helpMenu.add(helpItem);
+        menuBar.add(helpMenu);
 
 
         /// NORTH PART ///
         northPanel = new JPanel();
         northPanel.setLayout(new BoxLayout(northPanel, BoxLayout.LINE_AXIS));
+        northPanel.setBackground(Color.DARK_GRAY);
 
         addButton = new AddButton();
         northPanel.add(addButton);
@@ -60,6 +72,7 @@ public class MainFrame extends JFrame implements ActionListener {
 
 
         /// ADDING EVERYTHING TO MAIN FRAME ///
+        this.setJMenuBar(menuBar);
         this.add(northPanel, BorderLayout.NORTH);
         this.add(centerPanel, BorderLayout.CENTER);
         this.setVisible(true);
@@ -78,17 +91,17 @@ public class MainFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == saveItem) {        // saves data
-            System.out.println("Save");
+            System.out.println("Save menu item");
 
         } else if (e.getSource() == loadItem) { // loads saved data
-            System.out.println("Load");
+            System.out.println("Load menu item");
 
         } else if (e.getSource() == exitItem) { // exits the program
-            System.out.println("Exit");
+            System.out.println("Exit menu item");
             System.exit(0);
 
         } else if (e.getSource() == helpItem) { // opens help window
-            ;
+            System.out.println("Help menu item");
 
         }
     }
