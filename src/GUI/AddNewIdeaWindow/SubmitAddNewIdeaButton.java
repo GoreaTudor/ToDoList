@@ -1,6 +1,6 @@
 package GUI.AddNewIdeaWindow;
 
-import Data.ListItem;
+import Data.Idea;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -24,7 +24,7 @@ public class SubmitAddNewIdeaButton extends JButton implements ActionListener {
                 throw new InvalidIdeaException();
 
             // Add the new idea to the list
-            ListItem.items.add(new ListItem(idea, description));
+            Idea.ideas.add(new Idea(idea, description));
 
             // reset the fields
             AddNewIdeaFrame.getFrame().getIdeaNameField().setText("");

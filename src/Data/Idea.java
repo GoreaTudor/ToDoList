@@ -2,13 +2,13 @@ package Data;
 
 import java.util.ArrayList;
 
-public class ListItem {
-    public static ArrayList <ListItem> items = new ArrayList<>();
+public class Idea {
+    public static ArrayList <Idea> ideas = new ArrayList<>();
 
     private String ideaName;
     private String description;
 
-    public ListItem (String ideaName, String description) {
+    public Idea(String ideaName, String description) {
         this.ideaName = ideaName;
         this.description = description;
     }
