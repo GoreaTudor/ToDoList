@@ -1,20 +1,20 @@
 package GUI.MainWindow;
 
-import Data.ListItem;
+import Data.Idea;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ShowList extends JButton implements ActionListener {
+public class ShowList_TestClass extends JButton implements ActionListener {
 
-    ShowList() {
+    ShowList_TestClass() {
         this.setText("display all");
         this.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println(ListItem.items);
+        System.out.println(Idea.ideas);
     }
 }

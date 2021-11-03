@@ -8,20 +8,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame implements ActionListener {
+
     private static MainFrame frame = new MainFrame();
 
-    JMenuBar menuBar;
-    JMenu fileMenu;
-    JMenuItem saveItem;
-    JMenuItem loadItem;
-    JMenuItem exitItem;
-    JMenu helpMenu;
-    JMenuItem helpItem;
+    private JMenuBar menuBar;
+    private JMenu fileMenu;
+    private JMenuItem saveItem;
+    private JMenuItem loadItem;
+    private JMenuItem exitItem;
+    private JMenu helpMenu;
+    private JMenuItem helpItem;
 
     private AddButton addButton;
-    private ShowList showList;
+    private ShowList_TestClass showListTestClass;
     private JPanel northPanel;
     private ListPanel centerPanel;
+
 
     private MainFrame () {
 
@@ -40,6 +42,11 @@ public class MainFrame extends JFrame implements ActionListener {
         loadItem = new JMenuItem("Load");
         exitItem = new JMenuItem("Exit");
         helpItem = new JMenuItem("Help");
+
+        saveItem.setIcon(new ImageIcon("src/Images/save.png"));
+        loadItem.setIcon(new ImageIcon("src/Images/load.png"));
+        exitItem.setIcon(new ImageIcon("src/Images/exit.png"));
+        helpItem.setIcon(new ImageIcon("src/Images/help.png"));
 
         saveItem.addActionListener(this);
         loadItem.addActionListener(this);
@@ -63,8 +70,8 @@ public class MainFrame extends JFrame implements ActionListener {
         addButton = new AddButton();
         northPanel.add(addButton);
 
-        showList = new ShowList();
-        northPanel.add(showList);
+        showListTestClass = new ShowList_TestClass();
+        northPanel.add(showListTestClass);
 
 
         /// CENTER PART ///
