@@ -78,12 +78,13 @@ public class MainFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == saveItem) {        // saves data
-            ;
+            System.out.println("Save");
 
         } else if (e.getSource() == loadItem) { // loads saved data
-            ;
+            System.out.println("Load");
 
         } else if (e.getSource() == exitItem) { // exits the program
+            System.out.println("Exit");
             System.exit(0);
 
         } else if (e.getSource() == helpItem) { // opens help window
