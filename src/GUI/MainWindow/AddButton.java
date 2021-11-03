@@ -3,6 +3,7 @@ package GUI.MainWindow;
 import GUI.AddNewIdeaWindow.AddNewIdeaFrame;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,6 +15,7 @@ public class AddButton extends JButton implements ActionListener {
         this.setIcon(icon);
         this.setFocusable(false);
         this.addActionListener(this);
+        this.setBackground(Color.GREEN);
     }
 
     @Override
